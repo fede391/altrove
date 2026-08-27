@@ -904,25 +904,30 @@
       margin-bottom: 24px;
     }
 
-    /* MailerLite form overrides — match Altrove styling */
+    /* MailerLite form overrides — match Altrove styling.
+       MailerLite ships its own rules at specificity (1,4,1) using a dynamic
+       #mlb2-* id, so these selectors repeat its chain and add one more class
+       to land at (1,5,1) and win. Do not shorten them. */
     #newsletter .ml-form-embedContainer,
-    #newsletter .ml-form-embedWrapper {
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper {
       background: transparent !important;
+      background-color: transparent !important;
       border: none !important;
       box-shadow: none !important;
       max-width: 100% !important;
       width: 100% !important;
     }
     /* Hide MailerLite's own heading/description: we supply our own above */
-    #newsletter .ml-form-embedContent { display: none !important; }
-    #newsletter .ml-form-embedBody {
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent { display: none !important; }
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody {
       padding: 0 !important;
-      background: transparent !important;
+      background-color: transparent !important;
     }
-    #newsletter .ml-form-formContent { margin-bottom: 0 !important; }
-    #newsletter .ml-form-fieldRow { margin-bottom: 18px !important; }
-    #newsletter .ml-form-fieldRow input {
-      background: transparent !important;
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+      margin-bottom: 18px !important;
+    }
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.form-control {
+      background-color: transparent !important;
       border: none !important;
       border-bottom: 1px solid var(--divider) !important;
       border-radius: 0 !important;
@@ -930,13 +935,15 @@
       font-family: 'Cormorant Garamond', Georgia, serif !important;
       font-size: 19px !important;
       color: var(--dark) !important;
-      text-align: center;
+      text-align: center !important;
       box-shadow: none !important;
     }
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.form-control:focus {
+      border-bottom-color: var(--terra) !important;
+    }
     #newsletter .ml-form-fieldRow input::placeholder { color: var(--mid) !important; opacity: 0.5; }
-    #newsletter .ml-form-fieldRow input:focus { border-bottom-color: var(--terra) !important; }
-    #newsletter .ml-form-embedSubmit button {
-      background: var(--terra) !important;
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary {
+      background-color: var(--terra) !important;
       color: var(--cream) !important;
       border: none !important;
       border-radius: 0 !important;
@@ -947,16 +954,20 @@
       letter-spacing: 0.18em !important;
       text-transform: uppercase !important;
       height: auto !important;
-      transition: background 0.2s;
+      transition: background-color 0.2s;
     }
-    #newsletter .ml-form-embedSubmit button:hover { background: var(--dark) !important; }
-    #newsletter .ml-form-embedPermissions,
-    #newsletter .ml-form-embedMailerLite,
-    #newsletter .ml-form-successBody {
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.primary:hover {
+      background-color: var(--dark) !important;
+    }
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions,
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label,
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
       font-family: 'Cormorant Garamond', Georgia, serif !important;
       color: var(--mid) !important;
     }
-    #newsletter .ml-form-embedPermissions { font-size: 14px !important; }
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions {
+      font-size: 15px !important;
+    }
 
     @media (max-width: 960px) {
       .newsletter-inner { padding: 64px 24px; }
