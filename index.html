@@ -965,6 +965,16 @@
       font-family: 'Cormorant Garamond', Georgia, serif !important;
       color: var(--mid) !important;
     }
+    /* MailerLite styles the inner <p> and label text separately, so they need
+       their own rules or they fall back to Open Sans */
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions p,
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description,
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description p,
+    #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+      font-family: 'Cormorant Garamond', Georgia, serif !important;
+      color: var(--mid) !important;
+      font-size: 15px !important;
+    }
     #newsletter .ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions {
       font-size: 15px !important;
     }
