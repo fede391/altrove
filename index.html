@@ -24,6 +24,16 @@
   /></noscript>
   <!-- End Meta Pixel Code -->
 
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2598810');
+  </script>
+  <!-- End MailerLite Universal -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -868,6 +878,90 @@
     }
     .btn-submit:hover { background: var(--dark); }
 
+    /* ─── NEWSLETTER ────────────────────────────────────── */
+    #newsletter {
+      background: var(--cream-dark);
+      border-top: 1px solid var(--divider);
+    }
+    .newsletter-inner {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 88px 48px;
+      text-align: center;
+    }
+    .newsletter-title {
+      font-size: clamp(32px, 3.5vw, 46px);
+      font-weight: 300;
+      line-height: 1.1;
+      margin-top: 10px;
+      margin-bottom: 18px;
+    }
+    .newsletter-title em { font-style: italic; color: var(--terra); }
+    .newsletter-text {
+      font-size: 19px;
+      line-height: 1.75;
+      color: var(--mid);
+      margin-bottom: 24px;
+    }
+
+    /* MailerLite form overrides — match Altrove styling */
+    #newsletter .ml-form-embedContainer,
+    #newsletter .ml-form-embedWrapper {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    /* Hide MailerLite's own heading/description: we supply our own above */
+    #newsletter .ml-form-embedContent { display: none !important; }
+    #newsletter .ml-form-embedBody {
+      padding: 0 !important;
+      background: transparent !important;
+    }
+    #newsletter .ml-form-formContent { margin-bottom: 0 !important; }
+    #newsletter .ml-form-fieldRow { margin-bottom: 18px !important; }
+    #newsletter .ml-form-fieldRow input {
+      background: transparent !important;
+      border: none !important;
+      border-bottom: 1px solid var(--divider) !important;
+      border-radius: 0 !important;
+      padding: 10px 0 !important;
+      font-family: 'Cormorant Garamond', Georgia, serif !important;
+      font-size: 19px !important;
+      color: var(--dark) !important;
+      text-align: center;
+      box-shadow: none !important;
+    }
+    #newsletter .ml-form-fieldRow input::placeholder { color: var(--mid) !important; opacity: 0.5; }
+    #newsletter .ml-form-fieldRow input:focus { border-bottom-color: var(--terra) !important; }
+    #newsletter .ml-form-embedSubmit button {
+      background: var(--terra) !important;
+      color: var(--cream) !important;
+      border: none !important;
+      border-radius: 0 !important;
+      padding: 18px 48px !important;
+      font-family: 'Jost', sans-serif !important;
+      font-size: 14px !important;
+      font-weight: 400 !important;
+      letter-spacing: 0.18em !important;
+      text-transform: uppercase !important;
+      height: auto !important;
+      transition: background 0.2s;
+    }
+    #newsletter .ml-form-embedSubmit button:hover { background: var(--dark) !important; }
+    #newsletter .ml-form-embedPermissions,
+    #newsletter .ml-form-embedMailerLite,
+    #newsletter .ml-form-successBody {
+      font-family: 'Cormorant Garamond', Georgia, serif !important;
+      color: var(--mid) !important;
+    }
+    #newsletter .ml-form-embedPermissions { font-size: 14px !important; }
+
+    @media (max-width: 960px) {
+      .newsletter-inner { padding: 64px 24px; }
+    }
+
     /* ─── FOOTER ────────────────────────────────────────── */
     footer {
       background: var(--dark);
@@ -1499,6 +1593,16 @@
           Something went wrong. Please email us directly at <a href="mailto:info@livealtrove.com" style="text-decoration:underline;">info@livealtrove.com</a>.
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ─── NEWSLETTER ────────────────────────────────────── -->
+  <section id="newsletter">
+    <div class="newsletter-inner">
+      <p class="label">The Newsletter</p>
+      <h2 class="newsletter-title">Notes from <em>Elsewhere</em></h2>
+      <p class="newsletter-text">A few times a year we write about what we are finding: a village worth the detour, a producer we have started working with, a region quietly opening up. No offers, no noise.</p>
+      <div class="ml-embedded" data-form="v2gxka"></div>
     </div>
   </section>
 
