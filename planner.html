@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan Your Italy — Altrove</title>
+  <meta name="description" content="Tell us how you travel and we'll design a private, tailor-made Italian journey. Free consultation, no planning fees.">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1045435984692084');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"/></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream:       #F5F0E6;
+      --cream-dark:  #EDE8DC;
+      --dark:        #1A0F07;
+      --mid:         #6B5744;
+      --terra:       #8B3820;
+      --terra-light: #C4703C;
+      --divider:     rgba(139, 56, 32, 0.22);
+      --card-bg:     #F9F5EE;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cream);
+      color: var(--dark);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+    #hero { position: relative; min-height: 62vh; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-img {
+      position: absolute; inset: 0;
+      background-image: url('images/hero.jpg');
+      background-size: cover; background-position: center 42%;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(26,15,7,0.88) 0%, rgba(26,15,7,0.35) 55%, rgba(26,15,7,0.10) 100%);
+    }
+    .hero-content { position: relative; width: 100%; max-width: 1040px; margin: 0 auto; padding: 0 32px 62px; color: var(--cream); }
+    .hero-content .eyebrow { opacity: 0.75; margin-bottom: 16px; }
+    h1 { font-size: clamp(42px, 6.5vw, 76px); font-weight: 500; line-height: 1.0; margin: 0 0 14px; text-shadow: 0 2px 30px rgba(26,15,7,0.6); }
+    .hero-sub { font-size: clamp(22px, 3vw, 32px); font-style: italic; color: var(--terra-light); margin: 0; text-shadow: 0 1px 18px rgba(26,15,7,0.55); }
+
+    /* LAYOUT */
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 32px; }
+    .cols { display: grid; grid-template-columns: 1fr 1.05fr; gap: 64px; padding: 72px 0 90px; align-items: start; }
+    @media (max-width: 860px) { .cols { grid-template-columns: 1fr; gap: 44px; padding: 48px 0 64px; } }
+
+    h2 { font-size: 34px; font-weight: 500; line-height: 1.15; margin: 0 0 16px; }
+    .lead { font-size: 20px; color: var(--mid); font-style: italic; margin-bottom: 30px; }
+
+    .point { display: flex; gap: 15px; margin-bottom: 22px; }
+    .point-num { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 500; letter-spacing: 0.14em; color: var(--terra); padding-top: 6px; min-width: 26px; }
+    .point-body h3 { font-size: 21px; font-weight: 600; margin: 0 0 3px; }
+    .point-body p { margin: 0; font-size: 17px; color: var(--mid); line-height: 1.55; }
+
+    .founders { display: flex; align-items: center; gap: 14px; margin-top: 34px; padding-top: 26px; border-top: 1px solid var(--divider); }
+    .founders img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; }
+    .founders p { margin: 0; font-size: 16px; color: var(--mid); font-style: italic; }
+
+    /* FORM */
+    .form-card { background: var(--card-bg); border: 1px solid var(--divider); border-radius: 5px; padding: 34px 32px; }
+    @media (max-width: 520px) { .form-card { padding: 26px 20px; } }
+    .form-card .eyebrow { color: var(--terra); font-size: 11px; margin-bottom: 8px; }
+    .form-card h2 { font-size: 28px; margin-bottom: 6px; }
+    .form-note { font-size: 15px; color: var(--mid); font-style: italic; margin: 0 0 24px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+    .form-group { margin-bottom: 15px; }
+    label { display: block; font-family: 'Jost', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.13em; text-transform: uppercase; color: var(--mid); margin-bottom: 5px; }
+    input, select, textarea {
+      width: 100%; padding: 11px 13px;
+      border: 1px solid var(--divider); border-radius: 3px;
+      background: #FFFDF9; color: var(--dark);
+      font-family: 'Cormorant Garamond', Georgia, serif; font-size: 17px;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--terra-light); }
+    textarea { min-height: 88px; resize: vertical; }
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238B3820' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 13px center;
+    }
+    .btn-submit {
+      width: 100%; margin-top: 8px; padding: 15px;
+      background: var(--terra); color: var(--cream);
+      border: none; border-radius: 3px; cursor: pointer;
+      font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover { background: #732E1A; }
+    .btn-submit:disabled { opacity: 0.6; cursor: default; }
+    .privacy-line { font-family: 'Jost', sans-serif; font-size: 12px; color: var(--mid); text-align: center; margin: 14px 0 0; line-height: 1.5; }
+    .privacy-line a { color: var(--terra); }
+
+    footer { border-top: 1px solid var(--divider); padding: 30px 0 44px; }
+    footer .wrap { display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-family: 'Jost', sans-serif; font-size: 13px; color: var(--mid); }
+    footer a { color: var(--terra); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <section id="hero">
+    <div class="hero-img"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Altrove &nbsp;·&nbsp; The Italy Beyond</p>
+      <h1>Plan Your Italy</h1>
+      <p class="hero-sub">Private journeys, designed around you</p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="cols">
+
+      <div>
+        <h2>Not an itinerary off a shelf</h2>
+        <p class="lead">Tell us how you like to travel. We'll design the rest — and stay with you for every day of it.</p>
+
+        <div class="point">
+          <div class="point-num">01</div>
+          <div class="point-body">
+            <h3>A conversation first</h3>
+            <p>We start with a call to understand how you travel, what you've already seen, and what you'd rather avoid.</p>
+          </div>
+        </div>
+
+        <div class="point">
+          <div class="point-num">02</div>
+          <div class="point-body">
+            <h3>A proposal built for you</h3>
+            <p>A day-by-day itinerary with hotels, private guides, transport and reservations — all arranged, all included.</p>
+          </div>
+        </div>
+
+        <div class="point">
+          <div class="point-num">03</div>
+          <div class="point-body">
+            <h3>No planning fees</h3>
+            <p>The consultation and the proposal cost nothing. You only pay when you decide to travel with us.</p>
+          </div>
+        </div>
+
+        <div class="point">
+          <div class="point-num">04</div>
+          <div class="point-body">
+            <h3>We're with you throughout</h3>
+            <p>Reachable every day of your journey. If something needs solving in Italy, we solve it in Italy.</p>
+          </div>
+        </div>
+
+        <div class="founders">
+          <img src="images/avatar-vincenzo.png" alt="Vincenzo">
+          <img src="images/avatar-federico.png" alt="Federico">
+          <p>Vincenzo &amp; Federico, founders</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="form-card">
+          <p class="eyebrow">Free consultation</p>
+          <h2>Start your journey</h2>
+          <p class="form-note">We reply within one business day.</p>
+
+          <form name="planner" id="planner-form" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="planner">
+            <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" name="country" placeholder="United States">
+              </div>
+              <div class="form-group">
+                <label for="travelers">Travelers</label>
+                <select id="travelers" name="travelers">
+                  <option value="" disabled selected>How many</option>
+                  <option value="2">2</option>
+                  <option value="3-4">3–4</option>
+                  <option value="5-8">5–8</option>
+                  <option value="9+">9 or more</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="when">When</label>
+                <input type="text" id="when" name="when" placeholder="e.g. September 2027">
+              </div>
+              <div class="form-group">
+                <label for="duration">Length of trip</label>
+                <select id="duration" name="duration">
+                  <option value="" disabled selected>Select</option>
+                  <option value="under-1-week">Under a week</option>
+                  <option value="1-2-weeks">1–2 weeks</option>
+                  <option value="2-3-weeks">2–3 weeks</option>
+                  <option value="3-weeks-plus">More than 3 weeks</option>
+                  <option value="undecided">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="interest">What draws you</label>
+              <select id="interest" name="interest">
+                <option value="" disabled selected>Select a collection</option>
+                <option value="deep-italy">Deep Italy: lesser-known territories</option>
+                <option value="longevitaly">Longevitaly: blue zones &amp; slow living</option>
+                <option value="il-paese">Il Paese: heritage &amp; roots travel</option>
+                <option value="classics">The classics, seen differently</option>
+                <option value="custom">Something custom. Let's talk</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell us more</label>
+              <textarea id="message" name="message" placeholder="Regions you have in mind, occasions you're marking, what matters most to you…"></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit" id="planner-submit">Request your consultation</button>
+            <p class="privacy-line">No planning fees. We never share your details.<br>
+              See our <a href="/privacy.html">Privacy Policy</a>.</p>
+          </form>
+
+          <div id="planner-success" style="display:none; padding: 30px 0;">
+            <p class="eyebrow" style="color:var(--terra); margin-bottom:12px;">Enquiry received</p>
+            <p style="font-size:22px; font-weight:300; margin-bottom:10px;">Thank you. We'll be in touch within one business day.</p>
+            <p style="font-size:15px; color:var(--mid); font-style:italic; margin:0;">Vincenzo &amp; Federico</p>
+          </div>
+
+          <div id="planner-error" style="display:none; padding: 14px 0; color:var(--terra); font-size:15px; font-style:italic;">
+            Something went wrong. Please email us directly at
+            <a href="mailto:info@livealtrove.com" style="text-decoration:underline;">info@livealtrove.com</a>.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span>Altrove — The Italy Beyond</span>
+      <span>
+        <a href="/">Home</a> &nbsp;·&nbsp;
+        <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp;
+        <a href="mailto:info@livealtrove.com">info@livealtrove.com</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    const plannerForm = document.getElementById('planner-form');
+    if (plannerForm) {
+      plannerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = document.getElementById('planner-submit');
+        btn.textContent = 'Sending…';
+        btn.disabled = true;
+
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(new FormData(plannerForm)).toString()
+        })
+        .then(() => {
+          plannerForm.style.display = 'none';
+          document.getElementById('planner-success').style.display = 'block';
+          if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+        })
+        .catch(() => {
+          btn.textContent = 'Request your consultation';
+          btn.disabled = false;
+          document.getElementById('planner-error').style.display = 'block';
+        });
+      });
+    }
+  </script>
+
+</body>
+</html>
