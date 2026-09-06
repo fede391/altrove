@@ -6,28 +6,6 @@
 <title>Italy, October to April — a free planner from Altrove</title>
 <meta name="description" content="A free 8-page month-by-month planner for travelling Italy between October and April. What's happening, what's open, and what honestly closes.">
 
-<!-- ============================================================
-     ALTROVE · LANDING PAGE DEL LEAD MAGNET
-     ------------------------------------------------------------
-     DA FARE PRIMA DI PUBBLICARE, tre cose e basta:
-
-     1. FATTO - i due form puntano a MailerLite (form 197796541307553284)
-        Sostituisci con l'URL del form del tuo strumento email.
-        - Mailchimp:  Audience > Signup forms > Embedded form > copia l'action
-        - Brevo:      Contatti > Moduli > copia l'action
-        - Klaviyo / ActiveCampaign / HubSpot: idem, dal modulo embed
-        I nomi dei campi (EMAIL, FNAME, TIMING) vanno allineati a quelli
-        del tuo strumento: nel dubbio copiali dal modulo embed originale.
-
-     2. FATTO - pixel Meta 1045435984692084 inserito nel head
-        Incolla il codice base del pixel. Serve per costruire il pubblico
-        dei visitatori del sito.
-
-     3. FATTO - PDF ospitato su MailerLite e collegato in fondo alla pagina
-        Il file e su storage.googleapis.com/mailerlite-uploads-prod/b2598810/
-        Nessun caricamento sul sito necessario.
-     ============================================================ -->
-
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -48,103 +26,112 @@ src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Karla:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
 <style>
   :root{
-    --ground:#F7F6F1; --surface:#FFFFFF; --surface-2:#EFEEE6;
-    --ink:#141A18; --muted:#5E6B66; --line:#DEDCD2;
-    --accent:#2E5D4F; --accent-deep:#24493E; --gold:#C9A45E;
-    --alert:#8E4B3A;
+    --cream:#F5F0E6; --cream-dark:#EDE8DC; --card-bg:#F9F5EE; --field-bg:#FFFDF9;
+    --dark:#1A0F07; --mid:#6B5744;
+    --terra:#8B3820; --terra-deep:#732E1A; --terra-light:#C4703C;
+    --divider:rgba(139,56,32,.22);
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{margin:0;background:var(--ground);color:var(--ink);
-    font-family:"Karla","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.6;
+  body{margin:0;background:var(--cream);color:var(--dark);
+    font-family:"Cormorant Garamond",Georgia,serif;font-size:18px;line-height:1.65;
     -webkit-font-smoothing:antialiased;}
   img{max-width:100%;}
-  h1,h2,h3{margin:0;text-wrap:balance;font-weight:400;}
+  h1,h2,h3{margin:0;text-wrap:balance;font-weight:500;}
   p{margin:0 0 14px;}
-  .serif{font-family:"Instrument Serif",Georgia,serif;}
-  .eyebrow{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;}
+  a{color:var(--terra);}
+  .eyebrow{font-family:"Jost",sans-serif;font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px);}
 
   /* ---------- HERO ---------- */
-  .hero{background:var(--accent);color:#F4F2EC;padding:clamp(40px,7vw,84px) 0 clamp(44px,7vw,88px);}
-  .hero .eyebrow{color:rgba(244,242,236,.68);}
+  .hero{position:relative;color:var(--cream);padding:clamp(46px,7vw,88px) 0 clamp(48px,7vw,92px);overflow:hidden;}
+  .hero-img{position:absolute;inset:0;background-image:url('images/hero.jpg');background-size:cover;background-position:center 42%;}
+  .hero-overlay{position:absolute;inset:0;
+    background:linear-gradient(to top,rgba(26,15,7,.94) 0%,rgba(26,15,7,.80) 45%,rgba(26,15,7,.62) 100%);}
+  .hero .wrap{position:relative;}
+  .hero .eyebrow{color:rgba(245,240,230,.72);}
   .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,64px);align-items:center;margin-top:26px;}
   @media (max-width:840px){.hero-grid{grid-template-columns:1fr;gap:32px;}}
-  .hero h1{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(44px,7vw,74px);line-height:1;letter-spacing:-.02em;}
-  .hero h1 em{font-style:italic;color:var(--gold);}
-  .hero .sub{font-size:clamp(17px,2.2vw,20px);line-height:1.5;color:rgba(244,242,236,.9);max-width:30ch;margin-top:20px;}
-  .rule{height:2px;width:64px;background:var(--gold);margin:24px 0;}
-  .hero ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px;font-size:16px;color:rgba(244,242,236,.86);}
-  .hero ul li{display:flex;gap:11px;align-items:flex-start;}
-  .hero ul li::before{content:"";flex:0 0 6px;height:6px;margin-top:9px;background:var(--gold);border-radius:50%;}
+  .hero h1{font-size:clamp(46px,7.2vw,78px);line-height:1;letter-spacing:-.01em;
+    text-shadow:0 2px 30px rgba(26,15,7,.6);}
+  .hero h1 em{font-style:italic;color:var(--terra-light);}
+  .hero .sub{font-size:clamp(19px,2.3vw,23px);line-height:1.45;color:rgba(245,240,230,.92);max-width:32ch;margin-top:20px;font-style:italic;}
+  .rule{height:2px;width:64px;background:var(--terra-light);margin:24px 0;}
+  .hero ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:17px;color:rgba(245,240,230,.88);}
+  .hero ul li{display:flex;gap:12px;align-items:flex-start;}
+  .hero ul li::before{content:"";flex:0 0 6px;height:6px;margin-top:10px;background:var(--terra-light);border-radius:50%;}
 
   /* ---------- FORM CARD ---------- */
-  .formcard{background:var(--surface);color:var(--ink);border-radius:8px;padding:clamp(24px,3.4vw,34px);
-    box-shadow:0 24px 60px -30px rgba(0,0,0,.55);}
-  .formcard h2{font-family:"Instrument Serif",Georgia,serif;font-size:27px;line-height:1.12;margin-bottom:6px;}
-  .formcard .note{color:var(--muted);font-size:15px;margin-bottom:20px;}
-  .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px;}
-  .field label{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+  .formcard{background:var(--card-bg);color:var(--dark);border:1px solid var(--divider);border-radius:5px;
+    padding:clamp(24px,3.4vw,34px);box-shadow:0 24px 60px -32px rgba(26,15,7,.55);}
+  .formcard h2{font-size:29px;line-height:1.12;margin-bottom:6px;}
+  .formcard .note{color:var(--mid);font-size:16px;font-style:italic;margin-bottom:20px;}
+  .field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px;}
+  .field label{font-family:"Jost",sans-serif;font-size:11px;font-weight:500;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);}
   .field input,.field select{
-    font-family:inherit;font-size:16px;padding:12px 13px;border:1px solid var(--line);border-radius:5px;
-    background:var(--surface);color:var(--ink);width:100%;}
-  .field input:focus,.field select:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent);}
+    font-family:"Cormorant Garamond",Georgia,serif;font-size:17px;padding:11px 13px;
+    border:1px solid var(--divider);border-radius:3px;background:var(--field-bg);color:var(--dark);width:100%;}
+  .field input:focus,.field select:focus{outline:none;border-color:var(--terra-light);box-shadow:0 0 0 2px rgba(196,112,60,.18);}
+  .field select{appearance:none;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238B3820' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;background-position:right 13px center;}
   button.submit{
-    width:100%;font-family:inherit;font-size:16px;font-weight:700;letter-spacing:.01em;
-    padding:15px 18px;border:none;border-radius:5px;background:var(--accent);color:#F4F2EC;cursor:pointer;
-    transition:background .15s;margin-top:4px;}
-  button.submit:hover{background:var(--accent-deep);}
-  button.submit:focus-visible{outline:2px solid var(--gold);outline-offset:2px;}
-  .privacy{font-size:13px;color:var(--muted);margin:12px 0 0;line-height:1.45;}
+    width:100%;font-family:"Jost",sans-serif;font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase;
+    padding:15px 18px;border:none;border-radius:3px;background:var(--terra);color:var(--cream);cursor:pointer;
+    transition:background .2s;margin-top:4px;}
+  button.submit:hover{background:var(--terra-deep);}
+  button.submit:focus-visible{outline:2px solid var(--terra-light);outline-offset:2px;}
+  .privacy{font-family:"Jost",sans-serif;font-size:12px;color:var(--mid);margin:12px 0 0;line-height:1.5;}
 
   /* ---------- SECTIONS ---------- */
-  section.band{padding:clamp(48px,7vw,88px) 0;}
-  .band h2.title{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(30px,4.6vw,46px);line-height:1.06;letter-spacing:-.018em;margin-bottom:14px;}
-  .band .lede{color:var(--muted);font-size:18px;max-width:60ch;margin-bottom:34px;}
-  .eyebrow.dark{color:var(--muted);}
+  section.band{padding:clamp(50px,7vw,90px) 0;}
+  .band h2.title{font-size:clamp(32px,4.8vw,48px);line-height:1.06;letter-spacing:-.01em;margin-bottom:14px;}
+  .band .lede{color:var(--mid);font-size:20px;font-style:italic;max-width:60ch;margin-bottom:34px;}
+  .eyebrow.dark{color:var(--terra);}
 
-  .contents{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:6px;overflow:hidden;}
-  .contents > div{background:var(--surface);padding:22px 22px 24px;display:flex;flex-direction:column;gap:7px;}
-  .contents .n{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;letter-spacing:.13em;color:var(--gold);}
-  .contents h3{font-family:"Instrument Serif",Georgia,serif;font-size:21px;line-height:1.15;}
-  .contents p{font-size:15px;color:var(--muted);margin:0;line-height:1.5;}
+  .contents{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--divider);border:1px solid var(--divider);border-radius:5px;overflow:hidden;}
+  .contents > div{background:var(--card-bg);padding:24px 24px 26px;display:flex;flex-direction:column;gap:7px;}
+  .contents .n{font-family:"Jost",sans-serif;font-size:11px;font-weight:500;letter-spacing:.14em;color:var(--terra);}
+  .contents h3{font-size:23px;line-height:1.15;font-weight:600;}
+  .contents p{font-size:16px;color:var(--mid);margin:0;line-height:1.55;}
 
-  .honest{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-top:34px;}
-  .honest .head{padding:20px 24px 16px;border-bottom:1px solid var(--line);}
-  .honest .head h3{font-family:"Instrument Serif",Georgia,serif;font-size:23px;margin-bottom:4px;}
-  .honest .head p{font-size:15px;color:var(--muted);margin:0;}
+  .honest{background:var(--card-bg);border:1px solid var(--divider);border-radius:5px;overflow:hidden;margin-top:34px;}
+  .honest .head{padding:22px 26px 18px;border-bottom:1px solid var(--divider);}
+  .honest .head h3{font-size:25px;margin-bottom:4px;font-weight:600;}
+  .honest .head p{font-size:16px;color:var(--mid);font-style:italic;margin:0;}
   .scroller{overflow-x:auto;}
-  table{border-collapse:collapse;width:100%;min-width:480px;font-size:15px;}
-  th{text-align:left;font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:14px 20px 10px 24px;border-bottom:1px solid var(--line);}
-  td{padding:12px 20px 12px 24px;border-bottom:1px solid var(--line);vertical-align:top;}
+  table{border-collapse:collapse;width:100%;min-width:480px;font-size:16px;}
+  th{text-align:left;font-family:"Jost",sans-serif;font-weight:500;font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--mid);padding:14px 20px 10px 26px;border-bottom:1px solid var(--divider);}
+  td{padding:13px 20px 13px 26px;border-bottom:1px solid var(--divider);vertical-align:top;}
   tr:last-child td{border-bottom:none;}
-  td.state{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;white-space:nowrap;}
-  .yes{color:var(--accent);} .part{color:#8A6A22;} .no{color:var(--alert);}
+  td.state{font-family:"Jost",sans-serif;font-size:12px;font-weight:500;letter-spacing:.04em;white-space:nowrap;}
+  .yes{color:#4A6B3A;} .part{color:#8A6A22;} .no{color:var(--terra);}
 
-  .who{background:var(--surface-2);}
+  .who{background:var(--cream-dark);}
   .who .inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,60px);align-items:start;}
   @media (max-width:840px){.who .inner{grid-template-columns:1fr;}}
-  .who blockquote{margin:0;font-family:"Instrument Serif",Georgia,serif;font-size:clamp(26px,3.6vw,36px);line-height:1.16;letter-spacing:-.015em;}
-  .who blockquote span{color:var(--accent);font-style:italic;}
+  .who blockquote{margin:0;font-size:clamp(28px,3.8vw,38px);line-height:1.16;letter-spacing:-.01em;}
+  .who blockquote span{color:var(--terra);font-style:italic;}
 
-  .final{background:var(--accent);color:#F4F2EC;padding:clamp(48px,7vw,84px) 0;}
-  .final h2{font-family:"Instrument Serif",Georgia,serif;font-size:clamp(30px,4.6vw,44px);line-height:1.08;margin-bottom:14px;}
-  .final p{color:rgba(244,242,236,.88);max-width:52ch;}
+  .final{background:var(--dark);color:var(--cream);padding:clamp(50px,7vw,86px) 0;}
+  .final h2{font-size:clamp(32px,4.8vw,46px);line-height:1.08;margin-bottom:14px;}
+  .final p{color:rgba(245,240,230,.86);max-width:52ch;}
   .final .row{display:grid;grid-template-columns:1fr 420px;gap:clamp(28px,5vw,56px);align-items:center;}
   @media (max-width:840px){.final .row{grid-template-columns:1fr;}}
 
-  footer{padding:30px 0 44px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;}
-  footer a{color:var(--muted);}
-  a{color:var(--accent);}
+  footer{padding:30px 0 44px;font-family:"Jost",sans-serif;font-size:13px;color:var(--mid);display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;}
+  footer a{color:var(--terra);text-decoration:none;}
+  footer a:hover{text-decoration:underline;}
 </style>
 </head>
 <body>
 
-<!-- ================= HERO + FORM ================= -->
 <header class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
   <div class="wrap">
     <span class="eyebrow">Altrove · Destination Management, Italy</span>
     <div class="hero-grid">
@@ -164,7 +151,6 @@ src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"
         <h2>Send me the planner</h2>
         <p class="note">One email, the file, and nothing you did not ask for.</p>
 
-        <!-- Form collegato a MailerLite - account 2598810 - form 197796541307553284 - gruppo "Planner Oct-Apr" -->
         <form action="https://assets.mailerlite.com/jsonp/2598810/forms/197796541307553284/subscribe" method="post" target="_blank" novalidate>
           <div class="field">
             <label for="fname">First name</label>
@@ -190,7 +176,6 @@ src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"
   </div>
 </header>
 
-<!-- ================= WHAT'S INSIDE ================= -->
 <section class="band">
   <div class="wrap">
     <span class="eyebrow dark">What is inside</span>
@@ -240,7 +225,6 @@ src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ================= WHO ================= -->
 <section class="band who">
   <div class="wrap inner">
     <blockquote>Deeper, slower,<br><span>more personal.</span></blockquote>
@@ -253,7 +237,6 @@ src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"
   </div>
 </section>
 
-<!-- ================= FINAL CTA ================= -->
 <section class="final">
   <div class="wrap row">
     <div>
@@ -264,7 +247,6 @@ src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"
     <div class="formcard">
       <h2>Send me the planner</h2>
       <p class="note">Free, 8 pages, straight to your inbox.</p>
-      <!-- Stesso form MailerLite del modulo in alto -->
       <form action="https://assets.mailerlite.com/jsonp/2598810/forms/197796541307553284/subscribe" method="post" target="_blank" novalidate>
         <div class="field">
           <label for="fname2">First name</label>
@@ -292,10 +274,17 @@ src="https://www.facebook.com/tr?id=1045435984692084&ev=PageView&noscript=1"
 <div class="wrap">
   <footer>
     <span>© Altrove · Destination Management, Italy</span>
-    <!-- Link privacy + riserva PDF -->
     <span><a href="/privacy.html">Privacy Policy</a> · <a href="https://storage.googleapis.com/mailerlite-uploads-prod/b2598810/pmsbpZQX7aFGGjRdSdF96Gb5ey9yNaZy7jGpempK.pdf">Trouble with the form? Download the planner directly</a></span>
   </footer>
 </div>
+
+<script>
+  document.querySelectorAll('form[action*="mailerlite"]').forEach(function(f){
+    f.addEventListener('submit', function(){
+      if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+    });
+  });
+</script>
 
 </body>
 </html>
