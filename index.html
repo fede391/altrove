@@ -1026,6 +1026,27 @@
     .footer-social a:hover { opacity: 1; color: var(--terra-light); }
     .footer-social svg { width: 20px; height: 20px; display: block; }
 
+    .footer-cta {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 11px 24px;
+      border: 1px solid rgba(245,240,230,0.35);
+      border-radius: 2px;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      opacity: 0.8;
+      transition: background 0.25s, color 0.25s, border-color 0.25s, opacity 0.25s;
+    }
+    .footer-cta:hover {
+      background: var(--terra);
+      border-color: var(--terra);
+      color: var(--cream);
+      opacity: 1;
+    }
+
     /* ─── RESPONSIVE ────────────────────────────────────── */
     @media (max-width: 960px) {
       nav { padding: 0 20px; gap: 12px; }
@@ -1666,6 +1687,7 @@
           </svg>
         </a>
       </div>
+      <a class="footer-cta" href="https://calendly.com/vincenzo-granato-livealtrove/30min" target="_blank" rel="noopener noreferrer">Book a call</a>
       <p class="footer-contact-line" style="margin-top:12px; font-style:italic; font-size:12px; opacity:0.35;">Vincenzo &amp; Federico, Founders</p>
     </div>
   </footer>
